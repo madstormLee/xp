@@ -1,0 +1,48 @@
+<script src='./script.js'></script>
+<link rel='stylesheet' type='text/css' href='./style.css' />
+
+<h1>Schedule</h1>
+
+<section id='schedule' class='left medium-8 columns'>
+	<table>
+		<tbody>
+		<? foreach( $model->getTimeIndex() as $row ): ?>
+		<tr>
+			<th><?=$row->hour?></th>
+			<td>
+				<? if ( date('G') == $row->hour ): ?>
+				<div class='now' style='top: <?=date('i')/60 * 3?>rem'></div>
+				<? endif; ?>
+
+				<? foreach( $row->schedule as $schedule ): ?>
+				<dl style='height: <?=$schedule->duration*3?>rem'>
+					<dt>
+					<span class='time'><?=$schedule->hour?> 시 <?=$schedule->minute?> 분</span>
+					<span class='title'><?=$schedule->title?></span>
+					<a href='./write?id=<?=$row->id?>'>edit</a>
+					<a href='./delete?id=<?=$row->id?>'>delete</a>
+					</dt>
+					<dd><?=$schedule->contents?></dd>
+				</dl>
+				<? endforeach; ?>
+			</td>
+		</tr>
+		<? endforeach; ?>
+		</tbody>
+	</table>
+</section>
+
+<section id='right' class='right medium-4 columns'>
+	<section id='clock'></section>
+	<section id='weather' class='row collapse'>
+		<? $current = $model->getCurrentWeather(); ?>
+		<div class='left small-6 columns'>temperature</div>
+		<div class='right small-6 columns'><?=$current->temp ?> ℃ </div>
+		<div class='left small-6 columns'>weather forecast</div>
+		<div class='right small-6 columns'><?=$current->wfKor ?></div>
+		<div class='left small-6 columns'>wind</div>
+		<div class='right small-6 columns'><?=$current->wdKor ?></div>
+	</section>
+	<section id='write' data-href='./write'></section>
+	<section id='todo' data-href='~/todo' class='row'></section>
+</section>

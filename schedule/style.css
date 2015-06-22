@@ -1,0 +1,39 @@
+section#schedule {
+  position: relative; }
+  section#schedule div.now {
+    position: absolute;
+    left: 0;
+    z-index: 20;
+    width: 100%;
+    height: 0.3rem;
+    background: #f66; }
+  section#schedule table {
+    width: 100%; }
+    section#schedule table tbody tr th, section#schedule table tbody tr td {
+      height: 3rem;
+      border-bottom: 1px solid #999; }
+    section#schedule table tbody tr th {
+      width: 5rem; }
+    section#schedule table tbody tr td {
+      position: relative; }
+      section#schedule table tbody tr td dl {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 90%;
+        height: 3rem;
+        border: 1px solid #000;
+        text-align: left;
+        font-size: 0.8rem;
+        background: #eee;
+        z-index: 10; }
+
+#right {
+  background: #fff; }
+  #right h1 {
+    font-size: 1rem;
+    border-bottom: 1px solid #000; }
+  #right nav.component {
+    display: none; }
+
+/*# sourceMappingURL=style.css.map */

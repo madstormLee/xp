@@ -1,0 +1,94 @@
+#list dl dt {
+	background: #ddf;
+	border-bottom: 2px solid #000;
+	text-align: center;
+}
+#list dl dt ,
+#list dl dd {
+	font-size: .8rem;
+}
+section#list h1 {
+	font-size: 1rem;
+}
+section#list textarea {
+	height: 5rem;
+}
+section#right {
+	right: 0;
+}
+/************************* form.write *************************/
+form.write {
+}
+form.write button {
+	font-size: .8rem;
+	padding: .5rem 1rem;
+	float: right;
+}
+#contents {
+	min-height: 15rem;
+}
+
+
+/************************* #calendar *************************/
+#calendar .buttons {
+	text-align: center;
+}
+#calendar .buttons li a {
+	display: inline-block;
+	width: 24px;
+	height: 24px;
+	background-repeat: no-repeat;
+	background-position: 0 0;
+	text-indent: -999rem;
+	overflow: hidden;
+	margin: 0;
+	padding: 0;
+	background-color: transparent;
+	border: 0;
+}
+#calendar .buttons li a.today {
+	background-image: url(icons/stop.png);
+}
+#calendar .buttons li a.next {
+	background-image: url(icons/next_track.png);
+}
+#calendar .buttons li a.prev {
+	background-image: url(icons/previous_record.png);
+}
+#calendar table.calendar td {
+	position: relative;
+	height: 2.5rem;
+	padding: 0;
+	text-align: left;
+	font-size: .8rem;
+}
+#calendar table.calendar td.append {
+	text-align: right;
+	font-size: .6rem;
+	padding: 0;
+}
+#calendar table.calendar td.day div {
+	font-size: .6rem;
+	padding: 0;
+	background: transparent;
+	position: absolute;
+	right: .2rem;
+}
+#calendar table.calendar th {
+	width: 14.28%;
+	padding: 0;
+}
+#calendar table td.event {
+	background: #ccccff;
+}
+
+/************************* dl.days *************************/
+dl.days dt {
+	font-size: .8rem;
+}
+dl.days dd {
+	display: none;
+}
+dl.days dd ul li {
+	font-size: .8rem;
+}

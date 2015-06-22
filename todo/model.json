@@ -1,0 +1,61 @@
+{
+	"id": {
+		"id": "id",
+		"name": "id",
+		"label": "id",
+		"type": "number",
+		"extra": "auto_increment",
+		"key": "primary"
+	},
+	"domain": {
+		"id": "domain",
+		"name": "domain",
+		"label": "domain",
+		"type": "text",
+		"default": "todo"
+	},
+	"status": {
+		"id": "status",
+		"name": "status",
+		"label": "status",
+		"type": "number",
+		"default": 1,
+		"options": {
+			"new": {
+				"value": "1",
+				"label": "new"
+			},
+			"assigned": {
+				"value": "2",
+				"label": "assigned"
+			},
+			"closed": {
+				"value": "4",
+				"label": "closed"
+			},
+			"reopened": {
+				"value": "8",
+				"label": "reopened"
+			}
+		}
+	},
+	"contents": {
+		"id": "contents",
+		"name": "contents",
+		"label": "contents",
+		"max": 255,
+		"type": "text"
+	},
+	"wDate": {
+		"id": "wDate",
+		"name": "wDate",
+		"label": "Write Date",
+		"type": "datetime"
+	},
+	"uDate": {
+		"id": "uDate",
+		"name": "uDate",
+		"label": "Update Date",
+		"type": "datetime"
+	}
+}

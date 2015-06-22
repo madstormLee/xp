@@ -1,0 +1,14 @@
+{
+	"info": {
+		"title": "Xp",
+		"author": "Madstorm",
+		"year": "2014",
+		"project": "ThunderStorm"
+	},
+	"defaultComponent": "index",
+	"instances": {
+		"db": "MadDb::create('sqlite:data.db')",
+		"session": "MadSession::getInstance()",
+		"layout": "new MadView('mad/layout/default.html')"
+	}
+}

@@ -1,0 +1,18 @@
+<h1>Scrumb setting</h1>
+
+<form id='Scrumb' method='post' action='./saveSetting'>
+	<h2>Settings</h2>
+	<ul>
+		<li>
+			<label for='iteration'>iteration</label>
+			<input name='iteration' id='iteration' type='text' value='<?=$model->iteration?>' /> Days
+		</li>
+		<li>
+			<label for='kanban'>kanban</label>
+			<input type='checkbox' name='kanban' id='kanban' value='1' <?=($model->kanban==1) ? 'checked':'' ?> />
+		</li>
+	</ul>
+	<nav class='buttons'>
+		<button>Save</button>
+	</nav>
+</form>

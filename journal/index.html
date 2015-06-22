@@ -1,0 +1,70 @@
+<link rel='stylesheet' type='text/css' href='./style.css' />
+<script src='./script.js'></script>
+
+<section id='list' class='left medium-9 columns'>
+	<? if ( $params->searchWord ): ?>
+	<p>Search Word: <?=$params->searchWord?></p>
+	<? endif; ?>
+
+	<ol class='breadcrumbs'>
+		<? foreach( $model->getIndex() as $row ): ?>
+		<li><a href='#journal<?=$row->id?>'><?=$row->wDate?></a></li>
+		<? endforeach; ?>
+	</ol>
+
+	<? foreach( $model->getIndex() as $row ): ?>
+	<a id='journal<?=$row->id?>'></a>
+	<dl class='row collapse'>
+		<dt class='medium-2 columns'>
+		<?=$row->id ?>
+		<a href='./write?id=<?=$row->id?>' data-reveal-id='modal' data-reveal-ajax='true'>E</a>
+		<a href='./delete?id=<?=$row->id?>' data-confirm='Do you wanna delete file?'>X</a>
+		</dt>
+		<dt class='medium-4 columns'><?=$row->userId ?></dt>
+		<dt class='medium-6 columns'><?=$row->wDate ?></dt>
+		<dd> <?=nl2br(htmlEntities( $row->contents )) ?> </dd>
+	</dl>
+	<? endforeach; ?>
+</section>
+
+<section id='right' class='right medium-3 columns'>
+	<nav class='breadcrumbs'>
+		<a href="./">index</a>
+		<a href="./write" data-target='#list'>write</a>
+	</nav>
+
+	<section id='search'>
+		<h1>search</h1>
+
+		<form class='row collapse' action='./list' data-target='#list'>
+			<div class='small-9 columns'>
+				<input type='search' id='searchWord' name='searchWord' value='<?=$params->searchWord?>' />
+			</div>
+			<div class='small-3 columns'>
+				<button class='postfix'>search</button>
+			</div>
+		</form>
+	</section>
+
+	<section id='days'>
+		<h1>days</h1>
+
+		<dl class='days'>
+			<? foreach( $model->getDays() as $num => $days ): ?>
+			<dt><a class='toggleId' href='#days-<?=$id?>'><?=$days->duration?></a></dt>
+			<dd id='days-<?=$id?>'>
+			<ul>
+				<? foreach( $days->data as $row ): ?>
+				<li>
+				<a href='?wDate=<?=$row->day?>' data-count='<?=$row->cnt?>'><?=$row->day?></a>
+				<span> -- <?=$row->cnt?> writes</span>
+				</li>
+				<? endforeach; ?>
+			</ul>
+			</dd>
+			<? endforeach; ?>
+		</dl>
+	</section>
+
+	<section id='calendar' data-init-href='~/mad/utils/calendar?yearMonth=<?=$model->getSearchDate()?>'></section>
+</section>

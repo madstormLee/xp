@@ -1,0 +1,26 @@
+#TodoIndex ol.item li > a.done ,
+#TodoIndex ol.item li > a:hover {
+	text-decoration: line-through;
+	color: #ccc;
+}
+#TodoIndex ol.item li > a.done:hover {
+	text-decoration: none;
+}
+#TodoIndex ol.item li nav.buttons {
+	display: inline;
+	margin-left: 1rem;
+}
+#TodoIndex ol.item li nav.buttons a {
+	display: inline-block;
+	width: 1.2rem;
+	height: 1.2rem;
+	text-align: center;
+	font: 600 0.8rem verdana;
+	border: 1px solid #ccf;
+	border-radius: 0.6rem;
+	background: #ddf;
+}
+#TodoIndex ol.item li nav.buttons a.delete {
+	background: #fcc;
+	color: #f00;
+}

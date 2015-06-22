@@ -1,0 +1,48 @@
+section#schedule {
+	position: relative;
+	div.now {
+		position: absolute;
+		left: 0;
+		z-index: 20;
+		width: 100%;
+		height: 0.3rem;
+		background: #f66;
+	}
+	table {
+		width: 100%;
+		tbody tr {
+			th, td {
+				height: 3rem;
+				border-bottom: 1px solid #999;
+			}
+			th {
+				width: 5rem;
+			}
+			td {
+				position: relative;
+				dl {
+					position: absolute;
+					top: 0;
+					left: 0;
+					width: 90%;
+					height: 3rem;
+					border: 1px solid #000;
+					text-align: left;
+					font-size: 0.8rem;
+					background: #eee;
+					z-index: 10;
+				}
+			}
+		}
+	}
+}
+#right {
+	background: #fff;
+	h1 {
+		font-size: 1rem;
+		border-bottom: 1px solid #000;
+	}
+	nav.component {
+		display: none;
+	}
+}

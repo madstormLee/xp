@@ -1,0 +1,40 @@
+<link type='text/css' rel='stylesheet' href='./style.css' media='all' />
+<script src='./script.js'></script>
+<h1>kanban</h1>
+
+<section id='index' class='left medium-9 columns'>
+	<h1 title='project'>
+		project: <?=$params->project?>
+		<a href="./write?order=0" data-reveal-id="myModal" data-reveal-ajax='true'>Add First</a>
+	</h1>
+	<table style='width: <?=count($index)*15?>rem'>
+		<thead>
+			<tr>
+				<? foreach( $index as $row ): ?>
+				<th style='width: <?=round(100/count($index))?>%' data-id='<?=$row->id?>'>
+					<span title='status'><?=$row->status?></span> <b title='wip'><?=$row->wip?></b>
+					<a href="./write?id=<?=$row->id?>" data-reveal-id="myModal" data-reveal-ajax='true'>E</a>
+					<a href='./delete?id=<?=$row->id?>'>X</a>
+					<a href="./write?order=<?=$row->order + 1?>" data-reveal-id="myModal" data-reveal-ajax='true' title='Add Next'>A</a>
+					<div id="myModal" class="reveal-modal" data-reveal></div>
+				</th>
+				<? endforeach; ?>
+			</tr>
+		</thead>
+		<tbody>
+		<tr>
+			<? foreach( $index as $row ): ?>
+			<td class='item'>
+				<a class='addBacklog' href='~/backlog/write' data-reveal-id="myModal" data-reveal-ajax='true'>Add Backlog</a>
+			</td>
+			<? endforeach; ?>
+		</tr>
+		</tbody>
+	</table>
+</section>
+
+<? if ( ! $config->router->json ): ?>
+<section id='right' class='right medium-3 columns'>
+	<section id='backlog' data-href='~/backlog'></section>
+</section>
+<? endif; ?>

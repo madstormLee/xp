@@ -1,0 +1,16 @@
+<h1>Schedule write</h1>
+
+<form class='write' method='post' action='./save'>
+	<div class='simple'>
+		<label for='sDate'>start</label>
+		<input id='sDate' type='datetime' name='sDate' value='<?=$model->sDate?>' />
+		<label for='eDate'>end</label>
+		<input id='eDate' type='datetime' name='eDate' value='<?=$model->eDate?>' />
+		<label for='title'>title</label>
+		<input id='title' name='title' type='text' value='<?=$model->title?>' />
+	</div>
+	<label for="contents">contents</label>
+	<textarea id='contents' name='contents'><?=$model->contents?></textarea>
+
+	<button>Save</button>
+</form>

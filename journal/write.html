@@ -1,0 +1,12 @@
+<h1>Journal Write</h1>
+
+<form id='JournalWrite' class='write autosavable' method='post' action='./save'>
+	<input type='hidden' name='id' id='id' value='<?=$model->id?>' />
+	<label for='contents'>contents</label>
+	<textarea id='contents' name='contents'><?=$model->contents?></textarea>
+
+	<button>Save</button>
+</form>
+
+<section id='autosave' data-href='~/mad/autosave?domain=journal/write'></section>
+<script src='./write.js'></script>

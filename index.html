@@ -1,0 +1,21 @@
+<link rel='stylesheet' href='./style.css' type='text/css' media='all' />
+<script src="./script.js"></script>
+
+<section class='medium-2 columns'>
+	<? foreach( glob( '*', GLOB_ONLYDIR ) as $row ): ?>
+	<div>
+		<a href='~/<?=$row?>'><?=$row?></a>
+	</div>
+	<? endforeach; ?>
+</section>
+
+<section class='medium-7 columns' data-href='~/journal'>
+</section>
+
+<section class='medium-3 columns'>
+	<nav class='breadcrumbs'>
+		<a href='~/journal/write' data-reveal-id='modal' data-reveal-ajax='true'>journal</a>
+		<a href='~/userstory/write' data-reveal-id='modal' data-reveal-ajax='true'>userstory</a>
+	</nav>
+	<section id='todoWrite' data-href='~/todo/write'></section>
+</section>

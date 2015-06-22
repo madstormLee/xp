@@ -1,0 +1,35 @@
+{
+	"id": {
+		"id": "id",
+		"name": "id",
+		"label": "id",
+		"type": "number",
+		"extra": "auto_increment",
+		"key": "primary"
+	},
+	"userId": {
+		"id": "userId",
+		"name": "userId",
+		"label": "user Id",
+		"max": 32,
+		"type": "text"
+	},
+	"contents": {
+		"id": "contents",
+		"name": "contents",
+		"label": "contents",
+		"type": "text"
+	},
+	"wDate": {
+		"id": "wDate",
+		"name": "wDate",
+		"label": "Write Date",
+		"type": "datetime"
+	},
+	"uDate": {
+		"id": "uDate",
+		"name": "uDate",
+		"label": "Update Date",
+		"type": "datetime"
+	}
+}

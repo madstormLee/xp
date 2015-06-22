@@ -1,0 +1,13 @@
+<link rel='stylesheet' href='./style.css' type='text/css' media='all' />
+
+<h1>Todo</h1>
+
+<section id='TodoIndex' class='medium-9 columns' data-href='./list?domain=<?=$params->domain?>'></section>
+
+<section id='right' class='medium-3 columns'>
+	<nav class='component'>
+		<a href="./index">index</a>
+		<a href="./write?domain=<?=$params->domain?>" data-reveal-id="modal" data-reveal-ajax='true'>write</a>
+	</nav>
+	<section id='write' data-href="./write?domain=<?=$params->domain?>"></section>
+</section>

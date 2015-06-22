@@ -1,0 +1,14 @@
+<h1>Kanban Write</h1>
+
+<form class='write' method='post' action='./save'>
+	<input type='hidden' name='id' id='id' value='<?=$model->id?>' />
+
+	<label for='project'>project</label>
+	<input type='text' id='project' name='project' value='<?=$model->project?>' />
+	<label for='status'>status</label>
+	<input type='datetime' id='status' name='status' value='<?=$model->status?>' />
+	<label for='wip'>wip</label>
+	<input type='datetime' id='wip' name='wip' value='<?=$model->wip?>' />
+
+	<button class='tiny'>Save</button>
+</form>

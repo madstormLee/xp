@@ -1,0 +1,90 @@
+{
+	"id": {
+		"id": "id",
+		"name": "id",
+		"label": "id",
+		"type": "number",
+		"extra": "auto_increment",
+		"key": "primary"
+	},
+	"domain": {
+		"id": "domain",
+		"name": "domain",
+		"label": "domain",
+		"type": "text",
+		"default": "userstory"
+	},
+	"persona": {
+		"id": "persona",
+		"name": "persona",
+		"label": "as a",
+		"max": 255,
+		"type": "text"
+	},
+	"title": {
+		"id": "title",
+		"name": "title",
+		"label": "I want",
+		"max": 255,
+		"type": "text"
+	},
+	"contents": {
+		"id": "contents",
+		"name": "contents",
+		"label": "so that",
+		"max": 255,
+		"type": "text"
+	},
+	"priority": {
+		"id": "priority",
+		"name": "priority",
+		"label": "priority",
+		"min": 0,
+		"max": 255,
+		"default": 3,
+		"type": "number",
+		"options": {
+			"highest": {
+				"value": "1",
+				"label": "highest"
+			},
+			"high": {
+				"value": "2",
+				"label": "high"
+			},
+			"normal": {
+				"value": "3",
+				"label": "normal"
+			},
+			"low": {
+				"value": "4",
+				"label": "low"
+			},
+			"lowest": {
+				"value": "5",
+				"label": "lowest"
+			}
+		}
+	},
+	"estimate": {
+		"id": "estimate",
+		"name": "estimate",
+		"label": "estimate",
+		"min": 0,
+		"max": 255,
+		"default": 4,
+		"type": "number"
+	},
+	"wDate": {
+		"id": "wDate",
+		"name": "wDate",
+		"label": "Write Date",
+		"type": "datetime"
+	},
+	"uDate": {
+		"id": "uDate",
+		"name": "uDate",
+		"label": "Update Date",
+		"type": "datetime"
+	}
+}

@@ -1,0 +1,11 @@
+<h1>Todo write</h1>
+
+<form method='post' action='./save'>
+	<input type='hidden' name='id' value='<?=$model->id?>' />
+	<input type='hidden' name='domain' value='<?=$model->domain?>' />
+
+	<label for='contents'>Content</label>
+	<input type='text' id='contents' name='contents' value='<?=$model->contents?>' />
+
+	<button>save</button>
+</form>
