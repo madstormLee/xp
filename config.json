@@ -9,6 +9,6 @@
 	"instances": {
 		"db": "MadDb::create('sqlite:data.db')",
 		"session": "MadSession::getInstance()",
-		"layout": "new MadView('mad/layout/default.html')"
+		"layout": "new MadView('layout.html')"
 	}
 }
