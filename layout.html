@@ -5,8 +5,11 @@
 		<title><?=$config->info->title?> - <?=$config->info->subtitle?></title>
 		<meta charset="utf-8">
 		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
 		<link rel='stylesheet' type='text/css' href="https://cdnjs.cloudflare.com/ajax/libs/foundation/5.5.0/css/normalize.min.css" media='all' />
-		<link rel='stylesheet' type='text/css' href="/mad/project/layout/style.css" media='all' />
+		<link rel='stylesheet' type='text/css' href="https://cdnjs.cloudflare.com/ajax/libs/foundation/5.5.0/css/foundation.min.css" media='all' />
+		<link rel='stylesheet' type='text/css' href="./style.css" media='all' />
+
 		<script type='text/javascript' src="https://cdnjs.cloudflare.com/ajax/libs/foundation/5.5.0/js/vendor/modernizr.js"></script>
 		<script type='text/javascript' src="https://cdnjs.cloudflare.com/ajax/libs/foundation/5.5.0/js/vendor/jquery.js"></script>
 		<script type='text/javascript' src="https://cdnjs.cloudflare.com/ajax/libs/foundation/5.5.0/js/foundation.min.js"></script>
@@ -49,14 +52,10 @@
 			</nav>
 		</header>
 
-		<main class='columns'><?=$main?></main>
+		<main id='<?=$config->router->component?>' class='columns'><?=$main?></main>
 
 		<footer class='columns'>
-			<? if( isset($config->session->project) ) : ?>
-			<span class='notice'>project: <?=$config->session->project?></span>
-			<? else: ?>
 			<span class='copyrights'><?=$config->info->author?> <?=$config->info->year?>::<?=$config->info->project?></span>
-			<? endif; ?>
 		</footer>
 	</body>
 </html>

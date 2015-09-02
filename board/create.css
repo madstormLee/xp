@@ -1,0 +1,12 @@
+#boardWrite {
+	display: block;
+	width: 100%;
+	overflow: auto;
+}
+#board {
+	white-space: nowrap;
+}
+#board fieldset {
+	display: inline;
+	width: 25%;
+}

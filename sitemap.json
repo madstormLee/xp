@@ -1,9 +1,4 @@
 {
-	"project": {
-		"id": "Project",
-		"label": "project",
-		"component": "mad/project"
-	},
 	"journal": {
 		"label": "journal",
 		"component": "journal"
@@ -20,12 +15,8 @@
 		"label": "schedule",
 		"component": "schedule"
 	},
-	"scrum": {
-		"label": "scrum",
-		"component": "scrum"
-	},
-	"kanban": {
-		"label": "kanban",
-		"component": "kanban"
+	"board": {
+		"label": "board",
+		"component": "board"
 	}
 }

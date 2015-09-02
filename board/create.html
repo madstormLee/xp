@@ -1,0 +1,46 @@
+<link rel='stylesheet' href='./create.css' />
+<h1>create new board</h1>
+
+<form id='boardWrite' method='post' action='./saveCreate'>
+	<input type='text' name='title' id='title' placeholder='new board' />
+	<section id='board'>
+	<fieldset>
+			<legend>column 1</legend>
+
+			<label for='column1name'>name</label>
+			<input type='text' name='column[1][name]' id='column1name' />
+
+			<label for='column1wip'>wip</label>
+			<input type='text' name='column[1][wip]' id='column1wip' />
+		</fieldset>
+
+		<fieldset>
+			<legend>column 2</legend>
+
+			<label for='column2name'>name</label>
+			<input type='text' name='column[2][name]' id='column2name' />
+			<label for='column2wip'>wip</label>
+			<input type='text' name='column[2][wip]' id='column2wip' />
+		</fieldset>
+
+		<fieldset>
+			<legend>column 3</legend>
+
+			<label for='column3name'>name</label>
+			<input type='text' name='column[3][name]' id='column3name' />
+			<label for='column3wip'>wip</label>
+			<input type='text' name='column[3][wip]' id='column3wip' />
+		</fieldset>
+
+		<fieldset>
+			<legend>column 3</legend>
+
+			<label for='column3name'>name</label>
+			<input type='text' name='column[3][name]' id='column3name' />
+			<label for='column3wip'>wip</label>
+			<input type='text' name='column[3][wip]' id='column3wip' />
+		</fieldset>
+		</section>
+
+	<button>Save</button>
+</form>

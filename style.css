@@ -1,4 +1,375 @@
 /**********************************************************
+	Html Tags :
+		yes. this part use html5resetter. html is defaulted.
+		but some point has different taste.
+***********************************************************/
+table {
+  width: 100%; }
+
+h1, h2, h3, h4, h5, h6 {
+  position: relative; }
+
+ol, ul {
+  list-style-position: inside; }
+
+/* @override */
+.row {
+  max-width: 100%; }
+
+/* layout */
+main {
+  margin-bottom: 1rem; }
+
+main h1 {
+  font-size: 1rem; }
+
+main h2 {
+  font-size: 1.2rem; }
+
+footer {
+  background: #000;
+  text-align: right;
+  color: #fff;
+  z-index: 1000; }
+
+footer .copyrights {
+	font-size: .8rem;
+}
+section.view {
+  border: 1rem solid #999;
+  border-radius: 1rem;
+  padding: 1rem; }
+  section.view dl {
+    margin: 0 auto;
+    max-width: 62.5rem;
+    width: 100%; }
+    section.view dl:before, section.view dl:after {
+      content: " ";
+      display: table; }
+    section.view dl:after {
+      clear: both; }
+    section.view dl dt, section.view dl dd {
+      padding-left: 0.9375rem;
+      padding-right: 0.9375rem;
+      width: 16.66667%;
+      float: left;
+      background: #eee; }
+    section.view dl dt {
+      background: #cff; }
+
+/********************** table.index **********************/
+table.index {
+  width: 100%;
+  margin-top: 20px;
+  border: 0;
+  border-bottom: 1px solid #b4b4b4; }
+  table.index th {
+    padding: 0;
+    text-align: center; }
+  table.index th.ck {
+    width: 31px; }
+  table.index th.num {
+    width: 46px; }
+  table.index th.code {
+    width: 109px; }
+  table.index td {
+    border-top: 1px solid #e0e0e0;
+    text-align: center; }
+  table.index td.title {
+    text-align: left; }
+  table.index td.buttons {
+    list-style: none;
+    margin: 0;
+    left: 0; }
+    table.index td.buttons:before, table.index td.buttons:after {
+      content: " ";
+      display: table; }
+    table.index td.buttons:after {
+      clear: both; }
+    table.index td.buttons a {
+      -webkit-appearance: none;
+      -moz-appearance: none;
+      border-radius: 0;
+      border-style: solid;
+      border-width: 0;
+      cursor: pointer;
+      font-family: "Helvetica Neue", Helvetica, Roboto, Arial, sans-serif;
+      font-weight: normal;
+      line-height: normal;
+      margin: 0 0 1.25rem;
+      position: relative;
+      text-align: center;
+      text-decoration: none;
+      display: inline-block;
+      padding: 1rem 2rem 1.0625rem 2rem;
+      font-size: 1rem;
+      background-color: #008CBA;
+      border-color: #007095;
+      color: #FFFFFF;
+      transition: background-color 300ms ease-out;
+      padding: 0.625rem 1.25rem 0.6875rem 1.25rem;
+      font-size: 0.6875rem;
+      margin: 0; }
+      table.index td.buttons a:hover, table.index td.buttons a:focus {
+        background-color: #007095; }
+      table.index td.buttons a:hover, table.index td.buttons a:focus {
+        color: #FFFFFF; }
+
+/************************** table.admin ********************/
+table.admin {
+  width: 100%;
+  border-collapse: collapse;
+  border-top: 2px solid #3c9d2a;
+  border-bottom: 1px solid #b4b4b4; }
+  table.admin tr.first td,
+  table.admin tr.first th {
+    border-top: 1px solid #d3e8cc; }
+  table.admin tr th {
+    height: 30px;
+    width: 80px;
+    padding-left: 10px;
+    text-align: left;
+    font-weight: bold;
+    color: #3a8e23;
+    background-color: #f1f1f1; }
+  table.admin tr th,
+  table.admin tr td {
+    border-bottom: 1px solid #dddddd; }
+  table.admin tr td {
+    padding: 0;
+    padding-left: 20px;
+    text-align: left; }
+
+/************************** table.view ********************/
+table.view {
+  width: 100%;
+  border-collapse: collapse;
+  border-top: 2px solid #3c9d2a;
+  border-bottom: 1px solid #b4b4b4; }
+  table.view tr.first td,
+  table.view tr.first th {
+    border-top: 1px solid #d3e8cc; }
+  table.view tr th {
+    height: 30px;
+    width: 150px;
+    padding-left: 20px;
+    text-align: left;
+    font-weight: bold;
+    color: #3a8e23;
+    background-color: #f1f1f1; }
+  table.view tr th,
+  table.view tr td {
+    border-bottom: 1px solid #dddddd; }
+  table.view tr td {
+    padding: 0;
+    padding-left: 20px;
+    text-align: left; }
+
+/************************** table.images ********************/
+table.images tr {
+  padding: 5px 0; }
+table.images td {
+  text-align: left;
+  width: 180px;
+  padding: 10px 0; }
+table.images td span.bb {
+  margin-left: 12px; }
+table.images a {
+  margin-top: 24px; }
+table.images a img {
+  border-width: 1px;
+  border-color: #dedede;
+  padding: 3px;
+  width: 144px;
+  height: 100px; }
+table.images a img:hover {
+  border-color: #ff6600; }
+table.images td dl.info {
+  margin-top: 24px;
+  width: 180px; }
+table.images td dl.info dt {
+  float: left;
+  width: 90px; }
+table.images td dl.info dd {
+  float: left;
+  width: 90px; }
+table.images tbody tr:hover {
+  background: #ffffff; }
+
+/************************** nav.component ********************/
+nav.component {
+  margin: 0 auto;
+  max-width: 62.5rem;
+  width: 100%;
+  text-align: right; }
+  nav.component:before, nav.component:after {
+    content: " ";
+    display: table; }
+  nav.component:after {
+    clear: both; }
+  nav.component a {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    border-radius: 0;
+    border-style: solid;
+    border-width: 0;
+    cursor: pointer;
+    font-family: "Helvetica Neue", Helvetica, Roboto, Arial, sans-serif;
+    font-weight: normal;
+    line-height: normal;
+    margin: 0 0 1.25rem;
+    position: relative;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    padding: 1rem 2rem 1.0625rem 2rem;
+    font-size: 1rem;
+    background-color: #008CBA;
+    border-color: #007095;
+    color: #FFFFFF;
+    transition: background-color 300ms ease-out;
+    padding: 0.625rem 1.25rem 0.6875rem 1.25rem;
+    font-size: 0.6875rem;
+    border-radius: 1000px; }
+    nav.component a:hover, nav.component a:focus {
+      background-color: #007095; }
+    nav.component a:hover, nav.component a:focus {
+      color: #FFFFFF; }
+  nav.component a.current {
+    background: #cfccfc; }
+
+pre.printR {
+  font-size: 0.75rem; }
+
+/************************** form.write ********************/
+form.write {
+  margin: 0 auto;
+  max-width: 62.5rem;
+  width: 100%; }
+  form.write:before, form.write:after {
+    content: " ";
+    display: table; }
+  form.write:after {
+    clear: both; }
+  form.write .simple label {
+    border-style: solid;
+    border-width: 1px;
+    display: block;
+    font-size: 0.875rem;
+    height: 2.3125rem;
+    line-height: 2.3125rem;
+    overflow: visible;
+    padding-bottom: 0;
+    padding-top: 0;
+    position: relative;
+    text-align: center;
+    width: 100%;
+    z-index: 2;
+    background: #f2f2f2;
+    border-right: none;
+    color: #333333;
+    border-color: #cccccc;
+    padding-left: 0.9375rem;
+    padding-right: 0.9375rem;
+    width: 33.33333%;
+    float: left; }
+  form.write .simple input {
+    padding-left: 0.9375rem;
+    padding-right: 0.9375rem;
+    width: 66.66667%;
+    float: right;
+    margin-bottom: 0; }
+
+/************************** #right todo: from admin/style.css ********************/
+#index {
+  padding-left: 0.9375rem;
+  padding-right: 0.9375rem;
+  width: 75%;
+  float: left; }
+
+#right {
+  background: #ffffff;
+  z-index: 1;
+  padding-left: 0.9375rem;
+  padding-right: 0.9375rem;
+  width: 25%;
+  float: right; }
+  #right dl > dt {
+    margin: 0;
+    padding: 2px 10px;
+    font-size: 12px;
+    background: #eeeeee;
+    border-top: 2px solid #000000;
+    border-bottom: 2px solid #000000;
+    cursor: pointer; }
+  #right dl:first-child > dt {
+    border-top: 0; }
+  #right dl > dd.rightMenu h1 {
+    display: none; }
+  #right dl > dd.rightMenu ul {
+    list-style: none; }
+    #right dl > dd.rightMenu ul li a {
+      display: block;
+      font-size: 12px;
+      color: #000000;
+      padding: 2px 5px;
+      border-bottom: 1px solid #000000; }
+    #right dl > dd.rightMenu ul li a:hover {
+      text-decoration: none;
+      background: #ccccff; }
+  #right dl > dd.rightMenu table.list th, #right dl > dd.rightMenu table.list td {
+    font-size: 12px;
+    border-bottom: 1px solid #000000;
+    vertical-align: middle; }
+  #right dl > dd.rightMenu table.list th {
+    padding: 3px;
+    border-top: 1px solid #000000;
+    background: #cccccc; }
+  #right dl > dd.rightMenu table.list td a {
+    color: #000000;
+    font-size: 12px; }
+  #right dl > dd.rightMenu table.list td img {
+    height: 50px; }
+  #right form.simple dl.targetItem dt {
+    background: transparent;
+    padding: 5px; }
+  #right form.simple dl.targetItem dd {
+    border: 0;
+    border-top: 1px solid #cccccc; }
+
+/***************************** section.summary *****************************/
+section.summary {
+  border-bottom: 1px solid #000000;
+  padding-bottom: 10px;
+  float: left;
+  width: 100%; }
+  section.summary dl {
+    float: left;
+    border: 1px solid #000000;
+    border-left: 0;
+    display: inline-block;
+    font-size: 12px; }
+  section.summary dl.header {
+    border-left: 1px solid #000000; }
+  section.summary dl dt {
+    background: #cccccc; }
+  section.summary dl dt,
+  section.summary dl dd {
+    padding: 3px 20px;
+    border-bottom: 1px solid #000000; }
+  section.summary dl dd {
+    text-align: right; }
+
+p.noContent {
+  padding: 10px;
+  border: 1px solid #000;
+  text-align: center; }
+
+
+
+
+
+/**********************************************************
 	Common Classes :
 		for common user interface, use this part more.
 ***********************************************************/
@@ -742,4 +1113,131 @@ background: #eee;
 #calMonth {
 	float: left;
 	width: 100%;
+}
+/******************************** #todo ********************************/
+#todo ol.item li > a.done ,
+#todo ol.item li > a:hover {
+	text-decoration: line-through;
+	color: #ccc;
+}
+#todo ol.item li > a.done:hover {
+	text-decoration: none;
+}
+#todo ol.item li nav.buttons {
+	display: inline;
+	margin-left: 1rem;
+}
+#todo ol.item li nav.buttons a {
+	display: inline-block;
+	width: 1.2rem;
+	height: 1.2rem;
+	text-align: center;
+	font: 600 0.8rem verdana;
+	border: 1px solid #ccf;
+	border-radius: 0.6rem;
+	background: #ddf;
+}
+#todo ol.item li nav.buttons a.delete {
+	background: #fcc;
+	color: #f00;
+}
+
+#todo #write h1 ,
+#todo #write label {
+	display: none;
+}
+#todo #write form {
+	display: inline;
+}
+#todo #write form input {
+	display: inline-block;
+}
+/*************************** #userstory ***************************/
+#userstory ul.list {
+	list-style: none;
+}
+#userstory ul.list dl {
+position: relative;
+border: 2px solid #000;
+border-radius: 8px;
+padding: 0.5rem;
+padding-bottom: 0;
+height: 15rem;
+overflow: auto;
+}
+#userstory ul.list dl dt {
+	display: inline-block;
+}
+#userstory ul.list dl dd {
+	display: inline;
+}
+#userstory ul.list dl dd.info {
+	display: block;
+	font-size: .8rem;
+	margin-top: 1rem;
+}
+#userstory ul.list dl dd.info b {
+	color: #339;
+}
+#userstory ul.list dl dd.buttons {
+	display: block;
+	padding: .1rem .5rem;
+	bottom: 2rem;
+	right: 1rem;
+}
+#userstory ul.list dl dd.todos {
+}
+#userstory ul.list dl dd.todos h1:before {
+	content: 'To Do ';
+}
+#userstory ul.list dl dd.todos ol.item li {
+	position: relative;
+}
+#userstory ul.list dl dd.todos .buttons {
+	position: absolute;
+	top: 0;
+	right: 1rem;
+}
+#userstory ul.list dl dd.todos * {
+	font-size: 0.8rem;
+}
+#userstory ul.list dl dd.todos h1 {
+	display: none;
+}
+#userstory ul.list dl dd.todos a.button {
+	display: none;
+}
+/********************** #kanban **********************/
+#kanban {
+	overflow: auto;
+}
+#kanban table {
+	border: 1px solid #000;
+}
+#kanban table th ,
+#kanban table td {
+	border: 1px solid #000;
+}
+#kanban table th {
+	padding: 3px;
+	font-size: .8rem;
+}
+#kanban table th b:before {
+	content: "(";
+}
+#kanban table th b:after {
+	content: ")";
+}
+#kanban table td {
+	text-align: left;
+	height: 20rem;
+}
+#kanban h1 {
+	font-size: 1rem;
+}
+#kanban a.addBacklog {
+	vertical-align: bottom;
+	display: block;
+	background: #ccc;
+	text-align: center;
 }

@@ -7,6 +7,7 @@
 	},
 	"defaultComponent": "index",
 	"instances": {
+		"debug": "MadDebug::getInstance()",
 		"db": "MadDb::create('sqlite:data.db')",
 		"session": "MadSession::getInstance()",
 		"layout": "new MadView('layout.html')"

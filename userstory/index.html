@@ -1,45 +1,34 @@
-<link rel='stylesheet' type='text/css' href='./style.css' />
-
 <h1>Userstory</h1>
 
-<section id='index' class='medium-9 columns'>
-	<ul class='list'>
-		<? foreach( $model->getIndex() as $row ) : ?>
-		<li class='left large-4 medium-6 columns'>
-			<dl>
-				<dd class='buttons breadcrumbs'>
-					<a href='./write?id=<?=$row->id?>' data-reveal-id='modal' data-reveal-ajax='true'>Edit</a>
-					<a href='./delete?id=<?=$row->id?>'>Del</a>
-					<a href='~/write/todo/write?domain=userstory/<?=$row->id?>' data-reveal-id='modal' data-reveal-ajax='true'>Todo</a>
-				</dd>
-				<dt>As a</dt>
-				<dd><?=$row->persona?></dd>
-				<dt>I want</dt>
-				<dd><?=$row->title?></dd>
-				<dt>so that</dt>
-				<dd><?=$row->contents?></dd>
-				<dd class='todos' data-href='~/write/todo/list?domain=userstory/<?=$row->id?>'>
-				</dd>
-				<dd class='info'>
-					<b>priority</b>
-					<span><?=$row->getPriority()?></span>
-					<br />
-					<b>estimate</b>
-					<span><?=$row->getEstimate()?></span>
-					<br />
-					<b>write date</b>
-					<span><?=$row->wDate?></span>
-				</dd>
-			</dl>
-			</li>
-		<? endforeach; ?>
-	</ul>
-</section>
+<a class='write button' href='./write' data-reveal-id='modal' data-reveal-ajax='true'>write</a>
 
-<section id='right' class='right medium-3 columns'>
-	<nav class='component'>
-		<a href='./'>index</a>
-		<a href='./list' target='#list'>list</a>
-	</nav>
-	<section id='write' data-href='./write'></section>
-</section>
+<ul class='list'>
+	<? foreach( $model->getIndex() as $row ) : ?>
+	<li class='left large-4 medium-6 columns'>
+		<dl>
+			<dd class='buttons breadcrumbs'>
+				<a href='./write?id=<?=$row->id?>' data-reveal-id='modal' data-reveal-ajax='true'>Edit</a>
+				<a href='./delete?id=<?=$row->id?>'>Del</a>
+				<a href='~/todo/write?domain=userstory/<?=$row->id?>' data-reveal-id='modal' data-reveal-ajax='true'>Todo</a>
+			</dd>
+			<dt>As a</dt>
+			<dd><?=$row->persona?></dd>
+			<dt>I want</dt>
+			<dd><?=$row->title?></dd>
+			<dt>so that</dt>
+			<dd><?=$row->contents?></dd>
+			<dd class='todos' data-href='~/todo?domain=userstory/<?=$row->id?>'></dd>
+			<dd class='info'>
+				<b>priority</b>
+				<span><?=$row->getPriority()?></span>
+				<br />
+				<b>estimate</b>
+				<span><?=$row->getEstimate()?></span>
+				<br />
+				<b>write date</b>
+				<span><?=$row->wDate?></span>
+			</dd>
+		</dl>
+		</li>
+	<? endforeach; ?>
+</ul>

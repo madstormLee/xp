@@ -1,13 +1,15 @@
-<link rel='stylesheet' href='./style.css' type='text/css' media='all' />
-
 <h1>Todo</h1>
 
-<section id='TodoIndex' class='medium-9 columns' data-href='./list?domain=<?=$params->domain?>'></section>
+<a class='button' href="./write?domain=<?=$params->domain?>"  data-reveal-id="modal" data-reveal-ajax='true'>write</a>
 
-<section id='right' class='medium-3 columns'>
-	<nav class='component'>
-		<a href="./index">index</a>
-		<a href="./write?domain=<?=$params->domain?>" data-reveal-id="modal" data-reveal-ajax='true'>write</a>
-	</nav>
-	<section id='write' data-href="./write?domain=<?=$params->domain?>"></section>
-</section>
+<ol class='item'>
+	<? foreach( $model->getIndex() as $row ): ?>
+	<li class='<?=$row->contents?>'>
+		<a class='<?=$row->status?>' href='./toggleStatus?id=<?=$row->id?>'><?=$row->contents?></a>
+		<nav class='buttons'>
+			<a href="./write?id=<?=$row->id?>" data-reveal-id="modal" data-reveal-ajax='true'>E</a>
+			<a class='delete' data-confirm='정말로 삭제합니까?' href='./delete?id=<?=$row->id?>'>X</a>
+		</nav>
+	</li>
+	<? endforeach; ?>
+</ol>

@@ -1,0 +1,29 @@
+<h1 title='project'>
+	project: <?=$params->domain?>
+	<a class='small round button' href="./write?order=0" data-reveal-id="myModal" data-reveal-ajax='true'>Add</a>
+</h1>
+
+<table style='width: <?=count($index)*15?>rem'>
+	<thead>
+		<tr>
+			<? foreach( $index as $row ): ?>
+			<th style='width: <?=round(100/count($index))?>%' data-id='<?=$row->id?>'>
+				<span title='status'><?=$row->status?></span> <b title='wip'><?=$row->wip?></b>
+				<a href="./write?id=<?=$row->id?>" data-reveal-id="myModal" data-reveal-ajax='true'>E</a>
+				<a href='./delete?id=<?=$row->id?>'>X</a>
+				<a href="./write?order=<?=$row->order + 1?>" data-reveal-id="myModal" data-reveal-ajax='true' title='Add Next'>A</a>
+				<div id="myModal" class="reveal-modal" data-reveal></div>
+			</th>
+			<? endforeach; ?>
+		</tr>
+	</thead>
+	<tbody>
+	<tr>
+		<? foreach( $index as $row ): ?>
+		<td class='item'>
+			<a class='addBacklog' href='~/backlog/write' data-reveal-id="myModal" data-reveal-ajax='true'>Add Backlog</a>
+		</td>
+		<? endforeach; ?>
+	</tr>
+	</tbody>
+</table>

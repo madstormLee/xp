@@ -1,4 +1,3 @@
 $( function() {
 	$('#content').focus();
 });
-

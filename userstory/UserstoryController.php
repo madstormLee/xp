@@ -2,8 +2,6 @@
 class UserstoryController extends MadController {
 	function indexAction() {
 	}
-	function listAction() {
-	}
 	function writeAction() {
 		$this->model->fetch( $this->params->id );
 	}

@@ -7,12 +7,12 @@
 	<? endif; ?>
 
 	<ol class='breadcrumbs'>
-		<? foreach( $model->getIndex() as $row ): ?>
+		<? foreach( $index as $row ): ?>
 		<li><a href='#journal<?=$row->id?>'><?=$row->wDate?></a></li>
 		<? endforeach; ?>
 	</ol>
 
-	<? foreach( $model->getIndex() as $row ): ?>
+	<? foreach( $index as $row ): ?>
 	<a id='journal<?=$row->id?>'></a>
 	<dl class='row collapse'>
 		<dt class='medium-2 columns'>
@@ -36,7 +36,7 @@
 	<section id='search'>
 		<h1>search</h1>
 
-		<form class='row collapse' action='./list' data-target='#list'>
+		<form class='row collapse' action='./' data-target='#list'>
 			<div class='small-9 columns'>
 				<input type='search' id='searchWord' name='searchWord' value='<?=$params->searchWord?>' />
 			</div>
@@ -51,8 +51,8 @@
 
 		<dl class='days'>
 			<? foreach( $model->getDays() as $num => $days ): ?>
-			<dt><a class='toggleId' href='#days-<?=$id?>'><?=$days->duration?></a></dt>
-			<dd id='days-<?=$id?>'>
+			<dt><a class='toggleId' href='#days-<?=$num?>'><?=$days->duration?></a></dt>
+			<dd id='days-<?=$num?>'>
 			<ul>
 				<? foreach( $days->data as $row ): ?>
 				<li>
@@ -66,5 +66,5 @@
 		</dl>
 	</section>
 
-	<section id='calendar' data-init-href='~/mad/utils/calendar?yearMonth=<?=$model->getSearchDate()?>'></section>
+	<section id='calendar' data-init-href='/mad/utils/calendar?yearMonth=<?=$params->wDate?>'></section>
 </section>
